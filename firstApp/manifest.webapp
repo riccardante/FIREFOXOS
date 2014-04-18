@@ -1,0 +1,15 @@
+{
+  "name" : "Test",
+  "version" : "1.0",
+  "description" : "La mia prima applicazione",
+  "launch_path" : "/index.html",
+  "developer" : {
+    "name" : "riccardante",
+	"url" : "http://www.riccardante.it"
+  },
+  "icons": 
+  {
+     "60": "/style/icons/icon_60.png" ,
+     "128": "/style/icons/icon_128.png"
+  }
+} 
