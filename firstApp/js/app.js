@@ -25,6 +25,15 @@ function toggleButton() {
 
 
 window.onload = function () {
+  //nascondo tutte le section
+  document.getElementById("sEntrata").style.display = "none";
+  document.getElementById("sUscita").style.display = "none";
+  document.getElementById("sConfig").style.display = "none";
+
+  if(1==1){
+    document.getElementById("sEntrata").style.display = "block";
+  }
+
     // elements that we're going to reuse in the code
 /*
     listView = document.getElementById("memo-list");
@@ -42,13 +51,14 @@ window.onload = function () {
     document.getElementById("memo-title").addEventListener("input", textChanged);
 */
 	//document.getElementById("uscita").style.visibility = "hidden"; 
-	document.getElementById("uscita").innerHTML = "pippo";
-	document.getElementById("uscita").classList.add("hidden")
-	document.getElementById("uscita").innerHTML = "PLUTO";
+//	document.getElementById("uscita").innerHTML = "pippo";
+//	document.getElementById("sConfig").classList.add("hidden")
+console.log('pippo');
+//	document.getElementById("uscita").innerHTML = "PLUTO";
 
 	
-    document.getElementById("entrata").addEventListener("click", toggleButton);
-    document.getElementById("uscita").addEventListener("click", toggleButton);
+//    document.getElementById("entrata").addEventListener("click", toggleButton);
+//    document.getElementById("uscita").addEventListener("click", toggleButton);
 
 
     // the entry point for the app is the following command

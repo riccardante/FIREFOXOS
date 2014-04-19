@@ -2,19 +2,41 @@
 <html>
 <head>
    <meta charset="utf-8">
-   <link href="/style/buttons.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/style/base.css" />
+    <link rel="stylesheet" type="text/css" href="/style/ui.css" />
+    <link rel="stylesheet" type="text/css" href="/style/building_blocks.css" />
+   <link href="/shared/style/headers.css" rel="stylesheet" type="text/css">
+   <link href="/shared/style/buttons.css" rel="stylesheet" type="text/css">
    <title>Test</title>
 </head>
 <body role="application">
-  <section role="region" id="test">
+  <section role="region" id="sEntrata">
+    <header>
+      <menu type="toolbar">
+        <a id="c1" href="#"><span class="icon icon-options">options</span></a>
+      </menu>
+        <h1 id="tEntrata">Oggi</h1>
+    </header>
+    <a class="recommend" id="bEntrata" role="button" href="#">Entrata</a>
+  </section>
+
+  <section role="region" id="sUscita">
+    <header>
+      <menu type="toolbar">
+        <h1 id="tUscita">Oggi</h1>
+      </menu>
+    </header>
+    <a class="recommend" id="bUscita" role="button" href="#">Uscita</a>
+  </section>
+
+  <section role="region" id="sConfig">
     <header>
 	  <menu type="toolbar">
-		<h1>Test</h1>
+		<h1>Configurazione</h1>
 	  </menu>
 	</header>
-        <a class="recommend"   id="entrata" role="button" href="#">ENTRATA</a>
-        <button class="danger" id="uscita" >USCITA</button>  
   </section>
+
 <script src="/js/app.js"></script>
 </body>
 </html>
