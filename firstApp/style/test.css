@@ -1,0 +1,13 @@
+button,
+a[role="button"],
+.button {
+  width: 90%;
+  height: 3.8rem;
+  margin: 1em 1em 1rem;
+  padding: 0 1.5rem;
+}
+
+.rosso{
+    background-color:red;
+    color:#fff;
+    }

@@ -3,6 +3,11 @@
   "version" : "1.0",
   "description" : "La mia prima applicazione",
   "launch_path" : "/index.html",
+  "permissions": {
+    "storage": {
+      "description": "Required for storing and retrieving notes."
+}
+      },
   "developer" : {
     "name" : "riccardante",
 	"url" : "http://www.riccardante.it"
