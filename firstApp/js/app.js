@@ -30,20 +30,43 @@ function getWeekNumber(d) {
     return [d.getFullYear(), weekNo];
 }
 
+function calcolaIntervallo(inizio, fine){
+  var ore=0;
+  var minuti=0;
+
+    var minuti = Math.round((fine-inizio)/(1000*60));
+console.log(minuti);
+    while(minuti>59){
+      minuti = minuti-60;
+      ore=ore+1;
+    }
+console.log(ore);
+console.log(minuti);
+
+
+    minutiStr="" + minuti;
+    if(minuti<10)
+    minutiStr = "0"+minuti;
+
+    oreStr= ""+ore;
+    if(ore<10)
+    oreStr = "0"+ore;
+
+console.log(oreStr);
+console.log(minutiStr);
+
+  return [oreStr, minutiStr];
+}
 
 
 function updateDebug(){
-    var appo=1398458600102
+    var appo=1398458600102;
     var e = new Date();
-
     var dopo = e.getTime();
-    var minuti = Math.round((dopo-appo)/(1000*60));
-    minutiStr="00:" + minuti;
-    if(minuti<10)
-    minutiStr = "00:0"+minuti;
-    if(minuti>59)
-    minutiStr = Math.round(minuti/60)+":"+(minuti-60);
-    document.getElementById("debug").innerHTML =  minutiStr + " " + weekday[giornoDellaSettimana] +" "+getWeekNumber(d)[1]+"/"+getWeekNumber(d)[0];
+    minutiStr=calcolaIntervallo(appo,e)[1];
+    oreStr=calcolaIntervallo(appo,e)[0];
+
+    document.getElementById("debug").innerHTML =  oreStr+":"+minutiStr + " " + weekday[giornoDellaSettimana] +" "+getWeekNumber(d)[1]+"/"+getWeekNumber(d)[0];
 }
 
 
@@ -64,10 +87,11 @@ function entrata(){
 
 
 function uscita(){
+  updateDebug();
   document.getElementById("sEntrata").style.display = "block";
   document.getElementById("sUscita").style.display = "none";
-updateDebug();
 }
+
 
 function configura(){
   document.getElementById("sEntrata").style.display = "none";

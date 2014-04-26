@@ -17,7 +17,37 @@ request.onsuccess = function (event) {
 };
 
 
+// This event is only implemented in recent browsers
+request.onupgradeneeded = function(event) { 
+  console.log("Running onUpgradeNeeded");
 
+  var db = event.target.result;
+
+  if (!db.objectStoreNames.contains("registraorari")) {
+
+        console.log("Creating objectStore for registraorari");
+
+        var objectStore = db.createObjectStore("registraorari", {
+            keyPath: "id",
+            autoIncrement: true
+        });
+        objectStore.createIndex("title", "title", {
+            unique: false
+        });
+
+        console.log("Adding sample memo");
+        var sampleMemo1 = new Memo();
+        sampleMemo1.title = "Welcome Memo";
+        sampleMemo1.content = "This is a note taking app. Use the plus sign in the topleft corner of the main screen to add a new memo. Click a memo to edit it. All your changes are automatically saved.";
+
+        objectStore.add(sampleMemo1);
+    }
+};
+/*
+  // Create an objectStore for this database
+  var objectStore = db.createObjectStore("name", { keyPath: "myKey" });
+};
+*/
 
 
 /**
@@ -31,7 +61,37 @@ function Giornata() {
     this.pausai = 0;
     this.pausaf = 0;
     this.uscita = 0;
+    this.lavorativo = 0;
 }
+
+/**
+ * This memo function is used to create new giornate.
+ * @constructor
+ */
+function Settimana() {
+    this.year = 0;
+    this.week = 0;
+    this.towork = 0;
+    this.worked = 0;
+}
+
+
+/**
+ * This memo function is used to create new giornate.
+ * @constructor
+ */
+function Config() {
+    this.lun = 0;
+    this.mar = 0;
+    this.mer = 0;
+    this.gio = 0;
+    this.ven = 0;
+    this.sab = 0;
+    this.dom = 0;
+    this.pmin = 0;
+    this.pmax = 0;
+}
+
 
 /**
  * This function is used to save a memo into the indexedDB database. It is called
