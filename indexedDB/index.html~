@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+ <title>kiloporta</title>
+ <meta charset="utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />  
+
+ <link rel="stylesheet" type="text/css" href="style/app.css" />
+ <link rel="stylesheet" type="text/css" href="style/headers.css" />
+ <link rel="stylesheet" type="text/css" href="style/drawer.css" />
+ <link rel="stylesheet" type="text/css" href="style/progress_activity.css" />    
+
+ <script type="text/javascript" src="js/model.js"></script>
+ <script type="text/javascript" src="js/app.js"></script>
+</head>
+
+<body>
+
+<section id="menu" data-type="sidebar">
+  <header>
+    <h1 id="menuUsername">User</h1>
+  </header>
+   <nav>
+    <h2>Utils</h2>
+    <ul>
+        <li><a href="#" id="btn-toggleStatus" >Status <em>(inactive)</em></a></li>
+        <li><a href="#" id="btn-showNotifications" >Notifications <em>9</em></a></li>
+        <li><a href="#" id="btn-showRequests" >Requests <em>3</em></a></li>
+        <li><a href="#" id="btn-LogOff">Log off</a></li>
+        <li><a href="#" id="btn-About">About</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+<section id="drawer" role="region">
+  <header>
+    <!-- span id="drawer-controller" -->
+      <a id="drawer-controller-hide" href="#"><span class="icon icon-menu">hide sidebar</span></a>
+      <a id="drawer-controller-show" href="#drawer"><span class="icon icon-menu">show sidebar</span></a>
+    <!-- /span --> 
+    <h1 >Kiloporta<span id="addtitle"></span></h1>
+  </header>
+  <div role="main">
+  
+    <!-- SPLASH -->
+    <div id="splash">
+      <div id="logo"></div>
+      <a id="bSignUp" role="button" href="#">Sign up</a>
+      <a id="bSignIn" role="button" href="#">Sign in</a>
+    </div>
+
+    
+    <!-- SIGNIN -->
+    <div id="signin">
+      <form>
+        <fieldset>
+         <legend>Username</legend>
+          <section><p><input id="signin-username" type="text" placeholder="username" required="required"></p></section>
+         </fieldset>
+         <fieldset>
+        <legend>Password</legend>
+        <section><p><input id="signin-password" type="password" placeholder="****" required="required"></p></section>
+       </fieldset>
+
+      <a id="bFormSignIn" role="button" href="#">Sign in</a>
+      </form>   
+    </div>
+    
+    <!-- SIGNUP -->
+    <div id="signup"></div>
+    
+    <!-- DASHBOARD -->
+    <div id="dashboard">
+      <ul></ul>
+<!--
+        <li>
+          <h1 class="communicationTitle">Deadline - 1h:26m</h1>
+          <p><a href="#" id="req-001">from: Viale Europa - To: Via Laurentina - pacco 1kg</a></p>
+        </li>
+        <li>
+          <h1 class="communicationTitle">Deadline - 2h:10m</h1>
+          <p><a href="#" id="req-002">from: nomentano - To: circo massimo - busta lettera </a></p>
+        </li>
+        <li>
+          <h1 class="communicationTitle">Deadline - 3h:54m</h1>
+          <p><a href="#" id="req-003">from: tuscolano - To: cipro - pacco 2kg</a></p>
+        </li>
+-->    
+    </div>
+    
+    <!-- REQUEST -->
+    <div id="request">
+    </div>
+
+    <!-- COMMUNICATION -->
+    <div id="communication">
+    </div>
+
+    <!-- ABOUT -->
+    <div id="aboutApp">
+      <p><strong>Kiloporta</strong></p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        <br/><br/>Fusce sapien neque, ornare vitae elit quis, pretium varius neque. Vestibulum quis nisl tellus. Ut lacinia nulla vel nibh interdum, et suscipit ipsum faucibus. Nam nec nisl neque. Sed malesuada purus nibh, a facilisis mauris congue sit amet. Suspendisse eget metus eu tellus lobortis sagittis id et elit. Duis est nibh, laoreet at nisi quis, laoreet mattis lorem. Aenean arcu quam, auctor eget viverra quis, dapibus in urna. Quisque imperdiet, risus vitae consectetur sagittis, libero dui malesuada quam, non egestas diam augue eget tellus. Nam a tortor mattis, scelerisque massa eget, venenatis tellus. Duis et arcu at enim ultrices ultricies. Ut dignissim ipsum non sollicitudin vulputate. Fusce commodo massa ut convallis blandit. Nam dignissim quis enim eget ultrices. Curabitur iaculis congue eros.
+        <br/><br/>Aenean dignissim at mauris at laoreet. Donec placerat mi ante, vel molestie lacus luctus eu. Mauris faucibus urna at libero aliquet malesuada. Donec pellentesque pharetra risus, id ullamcorper sapien aliquet eu. Sed consequat luctus lorem, in faucibus odio dignissim sed. Morbi eu turpis eu turpis tempus sagittis eget at massa. Praesent eu metus tempor, vestibulum purus quis, scelerisque nisi. Donec in tempor tortor. Praesent eu pretium mauris. Phasellus eu nisl convallis, blandit lectus ut, pretium purus.
+      </p>
+    </div>
+
+    <!--
+    <div id="message"></div>
+    <div id="usgsted" class="twitterContent">     
+      <progress class="preloadUsgsted"></progress>
+      <ul id="tweetsUsgsted">
+      </ul>   
+    </div>
+    <div id="usgsbigquakes" class="twitterContent">        
+      <progress class="preloadUsgsbigquakes"></progress>
+      <ul id="tweetsUSGSBigQuakes">
+      </ul>           
+    </div>
+    <div id="contentEarthqueaks">          
+        <progress class="preload"></progress>
+        <ul id="listEarthqueaks">
+        <ul>
+    </div>    
+    <div id="map"></div>
+    -->
+  </div>
+</section>
+
+
+
+</body>
+</html>
